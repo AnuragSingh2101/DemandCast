@@ -1,0 +1,73 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+
+# uv
+uv.lock
+
+# Data files (large, not committed)
+data/raw/*
+data/interim/*
+data/processed/*
+data/forecasts/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/forecasts/.gitkeep
+
+# Model artifacts
+models/*
+!models/.gitkeep
+
+# Reports (generated)
+reports/*.html
+reports/*.pdf
+reports/*.md
+!reports/.gitkeep
+
+# Notebooks checkpoint files
+notebooks/.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+
+# MLflow
+mlruns/
+
+# Streamlit
+.streamlit/
+
+# Coverage
+.coverage
+htmlcov/
+.coverage.*
+pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Temporary files
+*.tmp
+*.temp

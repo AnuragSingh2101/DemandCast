@@ -1,0 +1,485 @@
+{
+  "total_rows": 180519,
+  "total_columns": 54,
+  "encoding": "iso-8859-1",
+  "date_column": "order date (DateOrders)",
+  "target_column": "Order Item Quantity",
+  "category_column": "Category Id",
+  "market_column": "Market",
+  "region_column": null,
+  "date_range": {
+    "min": "2015-01-01 00:00:00",
+    "max": "2018-01-31 23:38:00"
+  },
+  "partial_final_period": false,
+  "columns": [
+    {
+      "column": "Type",
+      "dtype": "str",
+      "n_unique": 4,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['DEBIT', 'TRANSFER', 'CASH', 'PAYMENT']\nLength: 4, dtype: str"
+    },
+    {
+      "column": "Days for shipping (real)",
+      "dtype": "int64",
+      "n_unique": 7,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[3 5 4 2 6]"
+    },
+    {
+      "column": "Days for shipment (scheduled)",
+      "dtype": "int64",
+      "n_unique": 4,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[4 1 2 0]"
+    },
+    {
+      "column": "Benefit per order",
+      "dtype": "float64",
+      "n_unique": 21998,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[  91.25       -249.0899963  -247.7799988    22.86000061  134.2100067 ]"
+    },
+    {
+      "column": "Sales per customer",
+      "dtype": "float64",
+      "n_unique": 2927,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[314.6400146 311.3599854 309.7200012 304.8099976 298.25     ]"
+    },
+    {
+      "column": "Delivery Status",
+      "dtype": "str",
+      "n_unique": 4,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Advance shipping', 'Late delivery', 'Shipping on time', 'Shipping canceled']\nLength: 4, dtype: str"
+    },
+    {
+      "column": "Late_delivery_risk",
+      "dtype": "int64",
+      "n_unique": 2,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[0 1]"
+    },
+    {
+      "column": "Category Id",
+      "dtype": "int64",
+      "n_unique": 51,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[73 17 29 24 13]"
+    },
+    {
+      "column": "Category Name",
+      "dtype": "str",
+      "n_unique": 50,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Sporting Goods', 'Cleats', 'Shop By Sport', 'Women's Apparel',\n 'Electronics']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Customer City",
+      "dtype": "str",
+      "n_unique": 563,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Caguas', 'San Jose', 'Los Angeles', 'Tonawanda', 'Miami']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Customer Country",
+      "dtype": "str",
+      "n_unique": 2,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Puerto Rico', 'EE. UU.']\nLength: 2, dtype: str"
+    },
+    {
+      "column": "Customer Email",
+      "dtype": "str",
+      "n_unique": 1,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['XXXXXXXXX']\nLength: 1, dtype: str"
+    },
+    {
+      "column": "Customer Fname",
+      "dtype": "str",
+      "n_unique": 782,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Cally', 'Irene', 'Gillian', 'Tana', 'Orli']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Customer Id",
+      "dtype": "int64",
+      "n_unique": 20652,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[20755 19492 19491 19490 19489]"
+    },
+    {
+      "column": "Customer Lname",
+      "dtype": "str",
+      "n_unique": 1109,
+      "n_missing": 8,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Holloway', 'Luna', 'Maldonado', 'Tate', 'Hendricks']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Customer Password",
+      "dtype": "str",
+      "n_unique": 1,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['XXXXXXXXX']\nLength: 1, dtype: str"
+    },
+    {
+      "column": "Customer Segment",
+      "dtype": "str",
+      "n_unique": 3,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Consumer', 'Home Office', 'Corporate']\nLength: 3, dtype: str"
+    },
+    {
+      "column": "Customer State",
+      "dtype": "str",
+      "n_unique": 46,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['PR', 'CA', 'NY', 'FL', 'MA']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Customer Street",
+      "dtype": "str",
+      "n_unique": 7458,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['5365 Noble Nectar Island',         '2679 Rustic Loop',\n     '8510 Round Bear Gate',          '3200 Amber Bend',\n '8671 Iron Anchor Corners']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Customer Zipcode",
+      "dtype": "float64",
+      "n_unique": 995,
+      "n_missing": 3,
+      "missing_pct": 0.0,
+      "sample_values": "[  725. 95125. 90027. 14150. 33162.]"
+    },
+    {
+      "column": "Department Id",
+      "dtype": "int64",
+      "n_unique": 11,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[2 4 5 3 6]"
+    },
+    {
+      "column": "Department Name",
+      "dtype": "str",
+      "n_unique": 11,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Fitness', 'Apparel', 'Golf', 'Footwear', 'Outdoors']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Latitude",
+      "dtype": "float64",
+      "n_unique": 11250,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[18.2514534  18.27945137 37.29223251 34.12594605 18.25376892]"
+    },
+    {
+      "column": "Longitude",
+      "dtype": "float64",
+      "n_unique": 4487,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[ -66.03705597  -66.0370636  -121.881279   -118.2910156   -66.03704834]"
+    },
+    {
+      "column": "Market",
+      "dtype": "str",
+      "n_unique": 5,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Pacific Asia', 'USCA', 'Africa', 'Europe', 'LATAM']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Order City",
+      "dtype": "str",
+      "n_unique": 3597,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Bekasi', 'Bikaner', 'Townsville', 'Toowoomba', 'Guangzhou']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Order Country",
+      "dtype": "str",
+      "n_unique": 164,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Indonesia', 'India', 'Australia', 'China', 'Jap\u00f3n']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Order Customer Id",
+      "dtype": "int64",
+      "n_unique": 20652,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[20755 19492 19491 19490 19489]"
+    },
+    {
+      "column": "order date (DateOrders)",
+      "dtype": "str",
+      "n_unique": 65752,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['1/31/2018 22:56', '1/13/2018 12:27', '1/13/2018 12:06', '1/13/2018 11:45',\n '1/13/2018 11:24']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Order Id",
+      "dtype": "int64",
+      "n_unique": 65752,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[77202 75939 75938 75937 75936]"
+    },
+    {
+      "column": "Order Item Cardprod Id",
+      "dtype": "int64",
+      "n_unique": 118,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[1360  365  627  502  278]"
+    },
+    {
+      "column": "Order Item Discount",
+      "dtype": "float64",
+      "n_unique": 1017,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[13.10999966 16.38999939 18.03000069 22.94000053 29.5       ]"
+    },
+    {
+      "column": "Order Item Discount Rate",
+      "dtype": "float64",
+      "n_unique": 18,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[0.04 0.05 0.06 0.07 0.09]"
+    },
+    {
+      "column": "Order Item Id",
+      "dtype": "int64",
+      "n_unique": 180519,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[180517 179254 179253 179252 179251]"
+    },
+    {
+      "column": "Order Item Product Price",
+      "dtype": "float64",
+      "n_unique": 75,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[327.75        59.99000168  39.99000168  50.          44.99000168]"
+    },
+    {
+      "column": "Order Item Profit Ratio",
+      "dtype": "float64",
+      "n_unique": 162,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[ 0.28999999 -0.80000001  0.08        0.44999999  0.06      ]"
+    },
+    {
+      "column": "Order Item Quantity",
+      "dtype": "int64",
+      "n_unique": 5,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[1 2 3 5 4]"
+    },
+    {
+      "column": "Sales",
+      "dtype": "float64",
+      "n_unique": 193,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[327.75       119.9800034   79.98000336 100.          89.98000336]"
+    },
+    {
+      "column": "Order Item Total",
+      "dtype": "float64",
+      "n_unique": 2927,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[314.6400146 311.3599854 309.7200012 304.8099976 298.25     ]"
+    },
+    {
+      "column": "Order Profit Per Order",
+      "dtype": "float64",
+      "n_unique": 21998,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[  91.25       -249.0899963  -247.7799988    22.86000061  134.2100067 ]"
+    },
+    {
+      "column": "Order Region",
+      "dtype": "str",
+      "n_unique": 23,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Southeast Asia', 'South Asia', 'Oceania', 'Eastern Asia', 'West Asia']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Order State",
+      "dtype": "str",
+      "n_unique": 1089,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Java Occidental', 'Rajast\u00e1n', 'Queensland', 'Guangdong', 'Tokio']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Order Status",
+      "dtype": "str",
+      "n_unique": 9,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['COMPLETE', 'PENDING', 'CLOSED', 'PENDING_PAYMENT', 'CANCELED']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Order Zipcode",
+      "dtype": "float64",
+      "n_unique": 609,
+      "n_missing": 155679,
+      "missing_pct": 86.24,
+      "sample_values": "[99301. 90049. 94110. 66212. 77041.]"
+    },
+    {
+      "column": "Product Card Id",
+      "dtype": "int64",
+      "n_unique": 118,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[1360  365  627  502  278]"
+    },
+    {
+      "column": "Product Category Id",
+      "dtype": "int64",
+      "n_unique": 51,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[73 17 29 24 13]"
+    },
+    {
+      "column": "Product Description",
+      "dtype": "float64",
+      "n_unique": 0,
+      "n_missing": 180519,
+      "missing_pct": 100.0,
+      "sample_values": "[]"
+    },
+    {
+      "column": "Product Image",
+      "dtype": "str",
+      "n_unique": 118,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n[                                          'http://images.acmesports.sports/Smart+watch ',\n                       'http://images.acmesports.sports/Perfect+Fitness+Perfect+Rip+Deck',\n 'http://images.acmesports.sports/Under+Armour+Girls%27+Toddler+Spine+Surge+Running+Shoe',\n                 'http://images.acmesports.sports/Nike+Men%27s+Dri-FIT+Victory+Golf+Polo',\n           'http://images.acmesports.sports/Under+Armour+Men%27s+Compression+EV+SL+Slide']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Product Name",
+      "dtype": "str",
+      "n_unique": 118,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n[                                 'Smart watch ',\n              'Perfect Fitness Perfect Rip Deck',\n 'Under Armour Girls' Toddler Spine Surge Runni',\n          'Nike Men's Dri-FIT Victory Golf Polo',\n    'Under Armour Men's Compression EV SL Slide']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Product Price",
+      "dtype": "float64",
+      "n_unique": 75,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[327.75        59.99000168  39.99000168  50.          44.99000168]"
+    },
+    {
+      "column": "Product Status",
+      "dtype": "int64",
+      "n_unique": 1,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "[0]"
+    },
+    {
+      "column": "shipping date (DateOrders)",
+      "dtype": "str",
+      "n_unique": 63701,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n[ '2/3/2018 22:56', '1/18/2018 12:27', '1/17/2018 12:06', '1/16/2018 11:45',\n '1/15/2018 11:24']\nLength: 5, dtype: str"
+    },
+    {
+      "column": "Shipping Mode",
+      "dtype": "str",
+      "n_unique": 4,
+      "n_missing": 0,
+      "missing_pct": 0.0,
+      "sample_values": "<ArrowStringArray>\n['Standard Class', 'First Class', 'Second Class', 'Same Day']\nLength: 4, dtype: str"
+    }
+  ],
+  "missing_summary": [
+    {
+      "missing_count": 180519,
+      "missing_pct": 100.0
+    },
+    {
+      "missing_count": 155679,
+      "missing_pct": 86.24
+    },
+    {
+      "missing_count": 3,
+      "missing_pct": 0.0
+    },
+    {
+      "missing_count": 8,
+      "missing_pct": 0.0
+    }
+  ],
+  "duplicate_count": 0,
+  "pii_columns": [
+    "Category Name",
+    "Customer Email",
+    "Customer Fname",
+    "Customer Lname",
+    "Customer Password",
+    "Customer Street",
+    "Customer Zipcode",
+    "Department Name",
+    "Order Item Cardprod Id",
+    "Order Zipcode",
+    "Product Card Id",
+    "Product Name"
+  ],
+  "id_like_columns": [
+    "Order Item Id"
+  ],
+  "shipping_columns": [
+    "Days for shipping (real)",
+    "Days for shipment (scheduled)",
+    "Delivery Status",
+    "Late_delivery_risk",
+    "shipping date (DateOrders)",
+    "Shipping Mode"
+  ]
+}

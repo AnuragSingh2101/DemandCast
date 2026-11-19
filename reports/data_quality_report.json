@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-11-16T19:01:58.281998",
+  "total_rows": 10,
+  "total_columns": 5,
+  "overall_passed": false,
+  "checks": {
+    "schema": {
+      "check": "schema",
+      "passed": true,
+      "missing_columns": [],
+      "extra_columns": []
+    },
+    "missing_values": {
+      "check": "missing_values",
+      "passed": true,
+      "max_allowed_pct": 5.0,
+      "high_missing_columns": {},
+      "all_missing_pct": {
+        "order_week_start": 0.0,
+        "category_id": 0.0,
+        "market": 0.0,
+        "order_item_quantity": 0.0,
+        "order_date": 0.0
+      }
+    },
+    "duplicates": {
+      "check": "duplicates",
+      "passed": "True",
+      "duplicate_count": 0,
+      "duplicate_pct": 0.0,
+      "max_allowed_pct": 1.0
+    },
+    "date_continuity": {
+      "check": "date_continuity",
+      "passed": true,
+      "min_date": "2018-01-01 00:00:00",
+      "max_date": "2018-01-10 00:00:00",
+      "expected_days": 10,
+      "actual_days": 10,
+      "coverage_pct": 100.0,
+      "missing_dates_count": 0,
+      "longest_gap_days": 0
+    },
+    "target_distribution": {
+      "check": "target_distribution",
+      "passed": true,
+      "count": 10,
+      "mean": 2.7,
+      "median": 3.0,
+      "std": 1.2516655570345725,
+      "min": 1.0,
+      "max": 4.0,
+      "zero_count": 0,
+      "negative_count": 0,
+      "unique_values": 3
+    },
+    "aggregation_levels": {
+      "category": {
+        "total_series": 2,
+        "sufficient_series": 2,
+        "insufficient_series": 0,
+        "min_obs_threshold": 5,
+        "mean_obs": 5.0,
+        "median_obs": 5.0
+      },
+      "market": {
+        "total_series": 2,
+        "sufficient_series": 2,
+        "insufficient_series": 0,
+        "min_obs_threshold": 5,
+        "mean_obs": 5.0,
+        "median_obs": 5.0
+      }
+    },
+    "pii_removed": {
+      "check": "pii_removed",
+      "passed": true,
+      "pii_columns_found": []
+    }
+  }
+}

@@ -1,0 +1,163 @@
+# DemandCast Configuration
+# All paths, seeds, frequencies, horizons, window sizes, service levels, thresholds
+
+paths:
+  raw_data: "data/raw"
+  interim_data: "data/interim"
+  processed_data: "data/processed"
+  forecasts_data: "data/forecasts"
+  models_dir: "models"
+  reports_dir: "reports"
+  notebooks_dir: "notebooks"
+  src_dir: "src"
+  app_dir: "app"
+  docs_dir: "docs"
+  scripts_dir: "scripts"
+  tests_dir: "tests"
+
+# Raw data files
+raw_files:
+  transactions: "DataCoSupplyChainDataset.csv"
+  data_dictionary: "DescriptionDataCoSupplyChain.csv"
+
+# Random seed for reproducibility
+seed: 42
+
+# Time series frequency: "D" for daily, "W" for weekly, "M" for monthly
+# Recommendation from audit: weekly (W-MON) balances seasonality capture and noise reduction
+frequency: "W-MON"
+
+# Forecast horizons (in periods of the chosen frequency)
+horizons:
+  short: 4   # 4 weeks ahead
+  medium: 8  # 8 weeks ahead
+  long: 12   # 12 weeks ahead
+
+# Backtesting windows (in periods)
+backtest:
+  train_window: 104   # 2 years of weekly data for training
+  validation_window: 26  # 6 months for validation
+  test_window: 12     # 3 months for final holdout
+  step_size: 4        # Roll forward by 4 weeks each iteration
+  min_train_size: 52  # Minimum 1 year of data to start
+
+# Feature engineering windows
+features:
+  lag_periods: [1, 2, 4, 8, 12, 26, 52]
+  rolling_windows: [4, 8, 12, 26]
+  expanding_min_periods: 4
+
+# Aggregation levels for forecasting
+aggregation_levels:
+  - "overall"
+  - "category"
+  - "market"
+  - "region"
+  - "category_market"
+
+# Target variable
+target:
+  column: "order_item_quantity"
+  description: "Total order item quantity per period"
+
+# Service levels for capacity planning (z-scores for normal approximation)
+service_levels:
+  conservative: 0.99   # z ≈ 2.33
+  expected: 0.95       # z ≈ 1.645
+  high_demand: 0.90    # z ≈ 1.28
+
+# Lead time assumptions (in periods, same as frequency)
+# NOTE: DataCo shipping days are delivery to customer, NOT supplier lead time.
+# These are scenario placeholders; user must override with real supplier lead times.
+lead_time:
+  default_periods: 4   # 4 weeks default
+  min_periods: 1
+  max_periods: 12
+
+# Anomaly detection thresholds
+anomaly:
+  z_score_threshold: 3.0
+  mad_threshold: 3.5
+  iqr_multiplier: 1.5
+  isolation_forest_contamination: 0.01
+  residual_threshold_multiplier: 3.0
+
+# Intermittent demand classification thresholds
+intermittent:
+  adi_threshold: 1.32  # Average Demand Interval
+  cv2_threshold: 0.49  # Coefficient of Variation squared
+
+# Model parameters
+models:
+  # Exponential smoothing
+  exp_smoothing:
+    seasonal_periods: 52  # Weekly data: 52 weeks per year
+    damped_trend: true
+    use_boxcox: true
+    remove_bias: true
+
+  # ARIMA/SARIMA
+  arima:
+    max_p: 3
+    max_d: 2
+    max_q: 3
+    max_P: 2
+    max_D: 1
+    max_Q: 2
+    seasonal_period: 52
+    stepwise: true
+    approximation: true
+    n_jobs: -1
+
+  # XGBoost
+  xgboost:
+    n_estimators: 500
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+    n_jobs: -1
+    early_stopping_rounds: 50
+    objective: "reg:squarederror"
+    eval_metric: "mae"
+
+  # LightGBM
+  lightgbm:
+    n_estimators: 500
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+    n_jobs: -1
+    early_stopping_rounds: 50
+    objective: "regression"
+    metric: "mae"
+    verbosity: -1
+
+  # Conformal prediction
+  conformal:
+    calibration_size: 0.2  # Fraction of training data for calibration
+    alpha: 0.1             # 90% prediction intervals
+
+# Evaluation metrics
+evaluation:
+  metrics: ["mae", "rmse", "wape", "smape", "bias", "mase"]
+  interval_metrics: ["coverage", "pinball_loss"]
+  significance_level: 0.05
+  multiple_comparison_correction: "holm"  # or "benjamini-hochberg"
+
+# Dashboard settings
+dashboard:
+  theme: "light"
+  page_title: "DemandCast - Demand Forecasting & Capacity Planning"
+  layout: "wide"
+  cache_ttl: 3600  # seconds
+
+# Data quality thresholds
+data_quality:
+  max_missing_pct: 0.05
+  max_duplicate_pct: 0.01
+  min_observations_per_series: 26  # At least 6 months of weekly data
+  partial_period_threshold_days: 7  # Flag final period if less than 7 days of data

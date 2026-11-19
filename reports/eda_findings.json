@@ -1,0 +1,19 @@
+{
+  "overall_mean": 2370.858024691358,
+  "overall_cv": 0.29019527189916794,
+  "n_categories": 51,
+  "categories_with_52w": 51,
+  "n_markets": 5,
+  "n_regions": 23,
+  "n_combinations": 167,
+  "combinations_with_52w": 167,
+  "overall_gini": 0.8004486822027883,
+  "market_gini": 0.2325563230481229,
+  "n_outliers_overall": 19,
+  "constant_demand_categories": 0,
+  "high_cv_categories": 42,
+  "date_range": {
+    "min": "2014-12-29 00:00:00",
+    "max": "2018-01-29 00:00:00"
+  }
+}
